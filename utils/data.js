@@ -1,158 +1,54 @@
 const ificationContent = [
   {
-    title:"有声书",
+    title:"朝代",
     content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
+      {text:"唐朝"},
+      {text:"宋朝"},
+      {text:"元朝"},
+      {text:"魏朝"},
+      {text:"清朝"},
+      {text:"近代"}
     ]
   },
   {
-    title:"畅销书",
+    title:"作者",
     content:[
-      {text:"社科"},
-      {text:"经管"},
-      {text:"文学"},
-      {text:"励志"},
-      {text:"名著"},
-      {text:"生活"}
+      {text:"李白"},
+      {text:"杜甫"},
+      {text:"白居易"},
+      {text:"李清照"},
+      {text:"王维"},
+      {text:"王安石"}
     ]
   },
   {
-    title:"儿童",
+    title:"主题",
     content:[
-      {text:"故事"},
-      {text:"儿歌"},
-      {text:"动画"},
-      {text:"科普"},
-      {text:"名著"},
-      {text:"国学"}
+      {text:"写鸟"},
+      {text:"故乡"},
+      {text:"流放"},
+      {text:"写春"},
+      {text:"写夏"},
+      {text:"写秋"}
     ]
   },
   {
-    title:"相声评书",
+    title:"教材",
     content:[
-      {text:"单田芳"},
-      {text:"郭德纲"},
-      {text:"热门相声"},
-      {text:"单口相声"},
-      {text:"名家评书"},
-      {text:"新锐笑将"}
+      {text:"小学"},
+      {text:"初中"},
+      {text:"高中"},
+      {text:"唐诗三百首"},
+      {text:"宋词三百首"},
+      {text:"元曲三百首"}
     ]
   },
   {
-    title:"情感生活",
+    title:"词牌",
     content:[
-      {text:"恋爱技巧"},
-      {text:"睡前夜话"},
-      {text:"情绪压力"},
-      {text:"婚姻家庭"},
-      {text:"个人成长"},
-      {text:"心理健康"}
+      {text:"浣溪沙"}
     ]
-  },
-  {
-    title:"人文",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"历史",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"国学书院",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"音乐",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"英语",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"教育培训",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"健康养生",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"广播剧",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
-  {
-    title:"戏曲",
-    content:[
-      {text:"言情"},
-      {text:"悬疑"},
-      {text:"都市"},
-      {text:"幻想"},
-      {text:"武侠"},
-      {text:"历史"}
-    ]
-  },
+  }
 ]
 
 module.exports = {
