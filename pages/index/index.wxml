@@ -1,8 +1,8 @@
 <view>
 	<!-- 搜索框 -->
 	<search></search>
-	<!-- 轮播图 -->
-	<view class="hmly-swiper-container">
+	<!-- 轮播图暂时不要了-->
+	<!-- <view class="hmly-swiper-container">
 		<swiper 
 			class="hmly-swiper" 
 			autoplay="true" 
@@ -12,29 +12,21 @@
 			current="{{swiperCurren}}" 
 			bindchange="swiperChange"
 		>
-			<!-- 轮播图图片 -->
 			<swiper-item class="hmly-swiper-item" wx:for="{{imgList}}" wx:key="index">
-				<!-- 加上widthFix可以使图片自适应 -->
 				<image src="{{item}}"></image>
 			</swiper-item>
 		</swiper>
-		<!-- 为了和喜马拉雅一致，自己需定制轮播图dots -->
 		<view class="hmly-dots">
 			<block wx:for="{{imgList.length}}" wx:key="index">
 				<view class="hmly-dots-item{{index == swiperCurrent ? ' hmly-dot-active' : ''}}"></view>
 			</block>
 		</view>
-	</view>
+	</view> -->
 
 	<!-- 宫格导航 -->
 	<view class="hmly-nav">
 		<block>
 			<view class="hmly-nav-item" bindtap="{{item.events}}" wx:for="{{navList}}" wx:key="index">
-				<!-- 
-					因为没有合适的图，所以全部使用的一样的 
-					并且因为界面都是一致的就是内容不同，这里为了简单，使用的都是统一界面
-					解决办法：你可以通过页面传参的方式来进行区分
-					-->
 				<image class="hmly-nav-icon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
 				<text class="hmly-nav-text">{{item.text}}</text>
 			</view>
@@ -44,11 +36,29 @@
 	<!-- 猜你喜欢 -->
 	<view class="hmly-like">
 		<view class="hmly-bar-title">
-			<view class="hmly-title-left">猜你喜欢</view>
+			<view class="hmly-title-left">常见分类</view>
 			<view class="hmly-title-right">查看全部 <text class="icon-right"></text> </view>
 		</view>
+    <view class="container">
+      <view class="category">
+        <image src="/image/index/index_category.jpg" mode="aspectFill" class="category-image" />
+        <text class="category-title">分类1</text>
+      </view>
+      <view class="category">
+        <image src="/image/index/index_category.jpg" mode="aspectFill" class="category-image" />
+        <text class="category-title">分类2</text>
+      </view>
+      <view class="category">
+        <image src="/image/index/index_category.jpg" mode="aspectFill" class="category-image" />
+        <text class="category-title">分类3</text>
+      </view>
+      <view class="category">
+        <image src="/image/index/index_category.jpg" mode="aspectFill" class="category-image" />
+        <text class="category-title">分类4</text>
+      </view>
+    </view>
 		<!-- 这没有使用数据绑定，因为是练手而且数据比较少 -->
-		<view class="hmly-like-item-box">
+		<!-- <view class="hmly-like-item-box">
 			<view 
 				class="hmly-like-item" 
 				bindtap="gotoDetails" 
@@ -60,29 +70,30 @@
 				<view class="hmly-like-img">
 					<image class="hmly-like-item-icon" src="{{item.coverMiddle}}" mode="widthFix"></image>
 					<view class="hmly-like-cover">
-						<!-- text用来显示icon  暂无 -->
 						<text class=""></text> 4.6亿
 					</view>
 				</view>
 				<view class="hmly-like-text">{{item.intro}}</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 
-	<!-- 有数据的时候显示 -->
-	<block wx:if="{{showitem}}">
-		<!-- 有声小说 -->
-		<showItem title="有声小说" showList="{{xiaoshuocontent}}"></showItem>
-		<!-- 相声评书 -->
-		<showItem title="相声评书" showList="{{xiangshengcontent}}"></showItem>
-		<!-- 脱口秀 -->
-		<showItem title="脱口秀" showList="{{tuokocontent}}"></showItem>
-	</block>
-	<block wx:else>
-		<view class="hmly-data-notip">
-			<view class="hmly-tip">
-				网络暂时走丢了，请稍后再试
-			</view>
+  <view class="hmly-like">
+		<view class="hmly-bar-title">
+			<view class="hmly-title-left">今日诗歌</view>
+			<view class="hmly-title-right">查看更多 <text class="icon-right"></text> </view>
 		</view>
-	</block>
+    <view class="container">
+      <view class="poem-list">
+        <block wx:for="{{poems}}" wx:key="index">
+          <view class="poem-item" bindtap="viewPoemDetail" data-id="{{item.id}}">
+            <text class="poem-title">{{item.title}}</text>
+            <text class="poem-author">作者：{{item.author}}</text>
+            <text class="poem-dynasty">朝代：{{item.dynasty}}</text>
+            <text class="poem-content">{{item.content}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+	</view>
 </view>
