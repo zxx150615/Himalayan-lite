@@ -39,7 +39,7 @@
 		<view class="hmly-title-right">查看全部 <text class="icon-right"></text> </view>
 	</view>
 	<view class="container">
-		<view class="category" bindtap="{{item.events}}" wx:for="{{commonCategory}}" wx:key="index">
+		<view class="category" bindtap="{{item.events}}" data-id = "{{item.id}}" wx:for="{{commonCategory}}" wx:key="index">
 			<image src="{{item.image}}" mode="aspectFill" class="category-image" />
 			<view class="category-content">
 				<text class="category-title">{{item.text}}</text>

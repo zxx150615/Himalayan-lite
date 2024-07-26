@@ -45,24 +45,28 @@ Page({
     ],
     commonCategory:[
       {
+        "id":1,
         "image": "/image/index/index_category.jpg",
         "events": "gotoPoemList",
         "text": "写春",
         "poem": "春日迟迟，绿野青青"
       },
       {
+        "id":2,
         "image": "/image/index/index_category.jpg",
         "events": "gotoPoemList",
         "text": "写夏",
         "poem": "夏日炎炎，绿树成荫"
       },
       {
+        "id":4,
         "image": "/image/index/index_category.jpg",
         "events": "gotoPoemList",
         "text": "写秋",
         "poem": "秋风瑟瑟，落叶纷飞"
       },
       {
+        "id":5,
         "image": "/image/index/index_category.jpg",
         "events": "gotoPoemList",
         "text": "写冬",
@@ -97,9 +101,9 @@ Page({
 			swiperCurrent: e.detail.current
 		})
 	},
-	gotoPoemList: function () {
-    // const typeId = event.currentTarget.dataset.typeId;
-    const typeId = 1
+	gotoPoemList: function (event) {
+    console.log("event",event)
+    const typeId = event.currentTarget.dataset.id;
     wx.navigateTo({
       url: `/pages/poemlist/poemlist?typeId=${typeId}`
     });
