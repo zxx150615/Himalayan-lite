@@ -23,26 +23,52 @@ Page({
     ],
 		navList: [
       {
-        icon: '/image/nav-icon/diantai.png',
+        icon: '/image/nav/sanbai.png',
         events: 'goToBangDan',
-        text: '人生必读'
+        text: '三百首'
       },
       {
-			icon: '/image/nav-icon/diantai.png',
+			icon: '/image/nav/sanzijing.png',
 			events: 'goToBangDan',
-			text: '小学必读'
+			text: '三字经'
 		},
 		{
-			icon: '/image/nav-icon/diantai.png',
+			icon: '/image/nav/wenyanwen.png',
 			events: 'goToBangDan',
-			text: '初中必读'
+			text: '文言文'
 		},
 		{
-			icon: '/image/nav-icon/diantai.png',
+			icon: '/image/nav/other.png',
 			events: 'goToBangDan',
-			text: '高中必读'
+			text: '其他读物'
 		},
-		],
+    ],
+    commonCategory:[
+      {
+        "image": "/image/index/index_category.jpg",
+        "events": "gotoPoemList",
+        "text": "写春",
+        "poem": "春日迟迟，绿野青青"
+      },
+      {
+        "image": "/image/index/index_category.jpg",
+        "events": "gotoPoemList",
+        "text": "写夏",
+        "poem": "夏日炎炎，绿树成荫"
+      },
+      {
+        "image": "/image/index/index_category.jpg",
+        "events": "gotoPoemList",
+        "text": "写秋",
+        "poem": "秋风瑟瑟，落叶纷飞"
+      },
+      {
+        "image": "/image/index/index_category.jpg",
+        "events": "gotoPoemList",
+        "text": "写冬",
+        "poem": "冬雪皑皑，寒风刺骨"
+      }
+    ],
 		swiperCurrent: 0,
   },
   
@@ -71,10 +97,12 @@ Page({
 			swiperCurrent: e.detail.current
 		})
 	},
-	goToBangDan: function () {
-		wx.navigateTo({
-			url: '/pages/index/bangdan/bangdan',
-		})
+	gotoPoemList: function () {
+    // const typeId = event.currentTarget.dataset.typeId;
+    const typeId = 1
+    wx.navigateTo({
+      url: `/pages/poemlist/poemlist?typeId=${typeId}`
+    });
 	},
 	gotoDetails(e) {
 		const url = e.currentTarget.dataset.coverimg;

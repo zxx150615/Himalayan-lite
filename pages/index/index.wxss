@@ -2,7 +2,7 @@
 .hmly-nav {
 	width: 90%;
 	height: 132rpx;
-	margin: 0rpx auto;
+	margin: 0 auto;
 	margin-top: 40rpx;
 	display: flex;
 	justify-content: space-between;
@@ -15,7 +15,7 @@
 	font-size: 20rpx;
 	text-align: center;
 	line-height: 35rpx;
-	color: #aaa;
+	color: #333; /* 改为更深的颜色以提高对比度 */
 }
 
 .hmly-nav-icon {
@@ -23,144 +23,154 @@
 	height: 84rpx;
 }
 
-/* 猜你喜欢 */
+/* 常见分类 */
 .hmly-like {
 	width: 90%;
-	margin: 0rpx auto;
+	margin: 0 auto;
 	margin-top: 40rpx;
 }
 
-.hmly-like-item-box {
-	width: 100%;
+.hmly-nav-text{
+  font-size: 22rpx;
+	font-weight: bold;
+}
+
+.hmly-bar-title {
 	display: flex;
 	justify-content: space-between;
-	overflow: hidden;
+	align-items: center;
+	font-size: 24rpx;
+	font-weight: bold;
+	margin-bottom: 20rpx;
 }
 
-.hmly-like-item {
-	width: 210rpx;
-	height: 310rpx;
-	border-radius: 15rpx;
+.hmly-title-left {
+	color: #333; /* 标题颜色 */
 }
 
-.hmly-like-img {
-	width: 210rpx;
-	height: 210rpx;
-	border-radius: 15rpx;
+.hmly-title-right {
+	color: #666; /* 灰色 */
+	font-size: 20rpx;
+}
+
+.hmly-title-right .icon-right {
+	color: #666; /* 灰色 */
+}
+
+
+
+
+/* 分类项 */
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 5px; /* 减少 padding */
+	background-color: #fff; /* 背景色改为白色 */
+}
+
+.category {
+	width: 48%; /* 保持宽度适应两项 */
+	margin-bottom: 15rpx; /* 减少底部间距 */
 	position: relative;
+	border-radius: 10rpx;
+	overflow: hidden;
+	background-color: #fff; /* 内容背景色 */
+	box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
-.hmly-like-item-icon {
+.category-image {
 	width: 100%;
-	height: 100%;
-	border-radius: 15rpx;
+	height: 110px; /* 增加高度，保持 4:3 比例 */
+	object-fit: cover; /* 确保图片适应容器 */
 }
 
-.hmly-like-text {
-	font-size: 22rpx;
-	color: #333;
-	margin-top: 10rpx;
+.category-content {
+	padding: 8rpx; /* 减少 padding */
+}
+
+.category-title {
+	font-size: 22rpx; /* 增加标题字体大小 */
+	font-weight: bold;
+	color: #000; /* 黑色标题 */
+	margin-bottom: 4rpx; /* 减少底部间距 */
+}
+
+.category-poem {
+	font-size: 16rpx; /* 增加诗词字体大小 */
+	color: #000; /* 黑色诗词 */
+	line-height: 1.5; /* 增加行高 */
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	/*行数n*/
+	-webkit-line-clamp: 2; /* 显示两行 */
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-.hmly-like-cover {
-	width: 190rpx;
-	height: 40rpx;
-	/* 透明背景层 */
-	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
-	/* opacity: 0.3; */
-	position: absolute;
-	bottom: 0rpx;
-	color: #fff;
-	font-size: 25rpx;
-	padding: 5rpx 10rpx;
-	border-bottom-left-radius: 15rpx;
-	border-bottom-right-radius: 15rpx;
-}
 
-.hmly-data-notip {
-	width: 100%;
-	height: 300rpx;
-	padding-top: 150rpx;
-}
 
-.hmly-tip {
-	width: auto;
-	height: 100rpx;
-	text-align: center;
-	margin: 0rpx auto;
-	color: red;
-	font-weight: 800;
-}
-.container {
-  padding: 10px;
+/* 诗歌展示 */
+.poem-container {
+	padding: 10px;
 }
 
 .poem-list {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .poem-item {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  margin-bottom: 2px;
+	margin-bottom: 15rpx;
+	padding: 10rpx;
+	background-color: #fff; /* 背景色 */
+	border-radius: 5rpx;
+	box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+	/* 去掉边框线 */
 }
 
 .poem-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 3px; 
-  text-transform: uppercase; /* 将标题转换为大写 */
-  margin-bottom: 5px;
-  display: block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-transform: uppercase; /* 标题转换为大写 */
+	color: #333; /* 标题颜色 */
+	display: block;
+}
+
+.poem-meta {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #888; /* 颜色统一 */
 }
 
 .poem-author,
 .poem-dynasty {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 3px;
-  display: block;
+	margin-right: 10px; /* 确保作者和朝代间距较小 */
+}
+
+.poem-dynasty {
+	color: #888; /* 朝代颜色 */
+}
+
+.poem-dynasty::before {
+	content: "[";
+}
+
+.poem-dynasty::after {
+	content: "]";
 }
 
 .poem-content {
-  font-size: 14px;
-  color: #666;
-  display: block;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.category {
-  width: 48%;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.category-image {
-  width: 100%;
-  height: 150px;
-}
-
-.category-title {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px;
+	font-size: 14px;
+	color: #666;
+	line-height: 1.5; /* 增加行高 */
+	white-space: pre-wrap; /* 保留文本格式 */
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* 显示两行 */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

@@ -1,0 +1,23 @@
+
+	<!-- 内容 -->
+	<view class="container">
+    <view class="type-info">
+      <text>诗人：李白</text>
+    </view>
+    <view class="description">
+      <text>这里是一个简单的介绍。</text>
+    </view>
+    <view class="poem-list">
+      <view wx:for="{{poems}}" wx:key="index" class="poem-item">
+        <view class="poem-details">
+          <text class="title">{{item.name}}</text>
+          <view class="info">
+            <text class="dynasty">[{{item.dynasty}}] {{item.author}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{loading}}" class="loading">
+      <text>加载中...</text>
+    </view>
+  </view>

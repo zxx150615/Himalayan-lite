@@ -1,6 +1,6 @@
 // 定义全局常量baseUrl用来存储前缀
 // const baseURL = 'http://mobile.ximalaya.com/mobile/discovery/v3/recommend/hotAndGuess?code=43_310000_3100&device=android&version=5.4.45';
-const baseUrl = 'http://yczxx.cpolar.cn/cailun/app';
+const baseUrl = 'http://yczxx.cpolar.cn/prod-api/cailun/app';
 
 /**
  * 使用Promise对wx.request api进行封装
@@ -9,7 +9,7 @@ const baseUrl = 'http://yczxx.cpolar.cn/cailun/app';
 function request(params = { method, url, data }) {
 	return new Promise(function (resolve, reject) {
 		wx.request({
-			url: 'http://yczxx.cpolar.cn/cailun/app' + params.url,
+			url: baseUrl + params.url,
 			method: params.method,
 			data: params.data ? JSON.stringify(params.data) : null,
 			header: { 'content-type': 'application/json' },

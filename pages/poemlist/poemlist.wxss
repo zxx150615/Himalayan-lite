@@ -1,0 +1,56 @@
+.poem-list {
+  padding: 10px;
+}
+
+.poem-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.poem-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dynasty {
+  font-size: 14px;
+  color: #888;
+}
+
+.author {
+  font-size: 14px;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  padding: 10px;
+}
+
+.type-info {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.description {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}

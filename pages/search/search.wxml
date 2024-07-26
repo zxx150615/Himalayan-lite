@@ -2,7 +2,7 @@
 <view class="hmly-search">
 	<view class="hmly-search-left">
 		<text class="icon-search"></text>
-		<input placeholder="搜索你想听的节目" bindconfirm="search"></input>
+		<input placeholder="输入诗人，名称进行搜索" bindconfirm="search"></input>
 	</view>
 	<view class="hmly-search-right" bindtap="cancelSearch">取消</view>
 </view>
@@ -30,7 +30,7 @@
 				<view class="{{index < 3 ? 'text-red' : ''}}">{{index + 1}}</view>
 				<view class="hmly-item-title text-black">{{item.title}}</view>
 			</view>
-			<text class="{{item.icon}} {{item.color}}"></text>
+			<!-- <text class="{{item.icon}} {{item.color}}"></text> -->
 		</view>
 	</view>
 </view>
